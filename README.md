@@ -16,7 +16,7 @@ Then we can use it to make the requets.
 note: the storefront API only works with graphQL.
 
     const httpLink = createHttpLink({
-      uri: `https://${'javisaacmv'}.myshopify.com/api/2022-07/graphql.json`,
+      uri: `https://${'your_storename'}.myshopify.com/api/2022-07/graphql.json`,
     });
 
 
@@ -24,7 +24,7 @@ note: the storefront API only works with graphQL.
       return {
         headers: {
           ...headers,
-          'X-Shopify-Storefront-Access-Token': 'ffc2d23de55953ebfbe64f6ec058611c',
+          'X-Shopify-Storefront-Access-Token': 'your_store_front_access_token',
         },
       };
     });
