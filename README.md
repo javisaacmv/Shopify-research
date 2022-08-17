@@ -6,11 +6,15 @@ This research comes about the shopify integration with React Native and how the 
 
 The final intention of this is guarantee if the order should be payed(or store payment info with the order) and later fill the shipment info to complete the checkout
 
+The final intention of this is guarantee if the order should be payed(or store payment info with the order) and later fill the shipment info to complete the checkout
+
+
+
 ## Structure
 
 ![image](https://user-images.githubusercontent.com/4220496/185017522-ca466196-afa2-4889-ab4d-064b4955fa61.png)
 
-The final intention of this is guarantee if the order should be payed(or store payment info with the order) and later fill the shipment info to complete the checkout
+
 
 ## Connect with shopify storefront API ([Link to storefront api docs](https://shopify.dev/api/storefront))
 
