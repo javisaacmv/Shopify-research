@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^6.7.0",
     "crypto": "^1.0.1",
     "graphql": "^16.5.0",
+    "multipassify": "^1.1.0",
     "native-base": "^3.4.11",
     "parse-url-query-params": "^0.0.6",
     "path": "^0.12.7",

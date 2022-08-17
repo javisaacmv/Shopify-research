@@ -5,6 +5,8 @@ import {
 } from 'react-native-webview';
 import parseQueryParameters from 'parse-url-query-params';
 import {View} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Multipassify from 'multipassify';
 
 const LoginWebView: React.FC = () => {
   const onNavigationStateChange = (navigationState: WebViewNavigation) => {
@@ -19,19 +21,37 @@ const LoginWebView: React.FC = () => {
     }
   };
 
+  const userEmail = AsyncStorage.getItem('customer_email');
+
+  var multipassify = new Multipassify('SHOPIFY MULTIPASS SECRET');
+
+  // Create your customer data hash
+  var customerData = {email: userEmail};
+
+  // Encode a Multipass token
+  var token = multipassify.encode(customerData);
+
+  // Generate a Shopify multipass URL to your shop
+  var url = multipassify.generateUrl(
+    customerData,
+    'yourstorename.myshopify.com',
+  );
+
+  AsyncStorage.setItem('customer_multipass_token', token);
+
   const webviewProps = {
     onNavigationStateChange,
     javaScriptEnabled: true,
     originWhitelist: ['*'],
     source: {
-      uri: 'https://www.colorindio.com/account/login?return_url=%2Faccount',
+      uri: url,
     },
   };
 
   return (
     // eslint-disable-next-line react-native/no-inline-styles
     <View style={{width: 'auto', height: 800}}>
-      <WebViewAndroid {...webviewProps} />
+      {url && <WebViewAndroid {...webviewProps} />}
     </View>
   );
 };

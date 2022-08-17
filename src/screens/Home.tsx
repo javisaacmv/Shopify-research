@@ -111,6 +111,7 @@ const HomeScreen = () => {
 
   return (
     <Box>
+      <Button onPress={() => navigation.navigate('Orders')}>Web Store</Button>
       <Button onPress={() => navigation.navigate('Orders')}>To orders</Button>
 
       <FlatList
