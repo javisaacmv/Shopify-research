@@ -6,6 +6,12 @@ This research comes about the shopify integration with React Native and how the 
 
 The final intention of this is guarantee if the order should be payed(or store payment info with the order) and later fill the shipment info to complete the checkout
 
+## Structure
+
+![image](https://user-images.githubusercontent.com/4220496/185017522-ca466196-afa2-4889-ab4d-064b4955fa61.png)
+
+The final intention of this is guarantee if the order should be payed(or store payment info with the order) and later fill the shipment info to complete the checkout
+
 ## Connect with shopify storefront API ([Link to storefront api docs](https://shopify.dev/api/storefront))
 
 First of all we need to create an account and next create a store in shopify page to get the storefront access token
